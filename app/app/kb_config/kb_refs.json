@@ -1,0 +1,62 @@
+{
+  "KnowledgeBases": [
+    {
+      "KnowledgeBaseId": "2095864559561684864",
+      "ModelConfig": {
+        "KnowledgeSchemaModel": {
+          "ModelAliasName": "youtu-mrc-pro",
+          "ModelName": "Youtu/youtu-mrc-pro",
+          "ModelParams": {
+            "Temperature": 0.7,
+            "TopP": 0.6,
+            "MaxTokens": 4000
+          }
+        },
+        "QaExtractModel": {
+          "ModelAliasName": "youtu-mrc-pro",
+          "ModelName": "Youtu/youtu-mrc-pro",
+          "ModelParams": {
+            "Temperature": 0.7,
+            "TopP": 0.6,
+            "MaxTokens": 4000
+          }
+        },
+        "EmbeddingModel": {
+          "ModelAliasName": "youtu-embedding",
+          "ModelName": "Youtu/youtu-embedding"
+        },
+        "FileParseModel": {
+          "ModelName": "Youtu/youtu-parsing-async",
+          "ModelAliasName": "youtu-parsing-async"
+        }
+      },
+      "RetrievalConfig": {
+        "Filters": [
+          {
+            "RetrievalType": "KnowledgeTypeQa",
+            "IndexId": 2,
+            "Confidence": 0.699999988079071,
+            "TopN": 3,
+            "IsEnable": true
+          },
+          {
+            "RetrievalType": "KnowledgeTypeDoc",
+            "IndexId": 4,
+            "Confidence": 0.20000000298023224,
+            "TopN": 5,
+            "IsEnable": true
+          },
+          {
+            "RetrievalType": "KnowledgeTypeDB",
+            "IsEnable": true
+          }
+        ],
+        "SearchStrategy": {
+          "RerankModelSwitch": "on",
+          "RerankModel": "Youtu/youtu-reranker",
+          "StrategyType": "Mixing"
+        }
+      }
+    }
+  ]
+}

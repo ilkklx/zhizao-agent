@@ -1,0 +1,22 @@
+{
+    "Variables": [
+        {
+            "VarId": "6bee079d-e742-4d59-b300-808d6b21af81",
+            "VarName": "car_path",
+            "VarType": "STRING",
+            "VarDefaultValue": "[[0, 2]]",
+            "VarDefaultFileName": "",
+            "VarDescription": "小车已走路径",
+            "VarModuleType": "2"
+        },
+        {
+            "VarId": "a914da21-cb90-40fd-a415-2a1066a4a66e",
+            "VarName": "car_position",
+            "VarType": "STRING",
+            "VarDefaultValue": "[0, 2]",
+            "VarDefaultFileName": "",
+            "VarDescription": "小车当前坐标",
+            "VarModuleType": "2"
+        }
+    ]
+}

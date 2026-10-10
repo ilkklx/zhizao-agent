@@ -1,0 +1,17 @@
+{
+  "ReferenceIds": {
+    "Workflows": [
+      "cf8af0e2-cf97-4157-80ce-55878b7ea5f9"
+    ],
+    "Plugins": [],
+    "Tools": [],
+    "Kbs": [],
+    "KbDocCategories": [],
+    "KbDocs": [],
+    "KbLabels": [],
+    "KbLabelValues": [],
+    "AppVariables": [],
+    "Agents": [],
+    "Widgets": []
+  }
+}

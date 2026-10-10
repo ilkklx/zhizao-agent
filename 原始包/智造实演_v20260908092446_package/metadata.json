@@ -1,0 +1,25 @@
+{
+  "PackageId": "2103160071964912064",
+  "PackageType": "ApplicationPackage",
+  "PackageVersion": "1.0.0",
+  "Components": {
+    "App": {
+      "Path": "app",
+      "Hash": "CC38AF502963E404"
+    },
+    "KnowledgeBases": {
+      "Path": "knowledge_bases",
+      "Items": [
+        {
+          "KnowledgeBaseId": "2095864559561684864",
+          "Path": "knowledge_bases/kb_2095864559561684864"
+        }
+      ],
+      "Hash": "ABFA5699AF071C61"
+    }
+  },
+  "ExtraInfo": {
+    "ExportedTime": "2026-09-25T00:30:13+08:00",
+    "ExportedBy": "微信用户V8rqw0"
+  }
+}

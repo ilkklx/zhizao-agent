@@ -1,0 +1,20 @@
+{
+  "KnowledgeBases": [
+    {
+      "KnowledgeBaseId": "2095864559561684864",
+      "Name": "智造实演",
+      "Path": "kb_2095864559561684864",
+      "Hash": "EF8F05BE509CC002",
+      "Capacity": "0",
+      "CharSize": "37284"
+    }
+  ],
+  "ReferenceIds": {
+    "KbQaCategories": [
+      "2095864564599027008"
+    ],
+    "KbDocCategories": [
+      "2095864564674524480"
+    ]
+  }
+}

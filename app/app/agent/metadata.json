@@ -1,0 +1,13 @@
+{
+  "ReferenceIds": {
+    "Agents": [
+      "abb75da0-e79e-4ca7-9c77-f1f32d435921"
+    ],
+    "Plugins": [
+      "3ad93aae-587e-4bcc-ae07-ad13bfb1aaca"
+    ],
+    "Tools": [
+      "0ca8d482-1e77-462b-bc21-807c8f052f69"
+    ]
+  }
+}

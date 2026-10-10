@@ -1,0 +1,176 @@
+{
+    "AppId": "2095864559561684864",
+    "Name": "我的智能体应用16",
+    "Description": "",
+    "Avatar": "http://101.42.184.216/qbot/public/1781137320016347136/2095864559561684864/image/RZQmTeuUycIexTwSuFsv-2097133791779829632.png",
+    "BasicConfig": {
+        "EnableAudit": true,
+        "Pattern": "agent",
+        "PatternFlag": 2,
+        "Greeting": {
+            "Greeting": "欢迎来到《智造实演》AGV 避障实验！我是你的 AI 实验助手。你可以输入\"帮我规划一条从(0,2)到(7,2)的避障路径…\"来规划路线，也可以问我 A*算法、传感器原理、AGV安全规范等知识。点击方向按钮自由指挥小车，开始你的避障之旅吧！",
+            "OpeningQuestions": []
+        },
+        "RoleConfig": {
+            "RoleDescription": ""
+        }
+    },
+    "ModelConfig": {
+        "ThinkModel": {
+            "Model": {
+                "ModelAliasName": "youtu-intent-pro",
+                "PromptVersion": "v4",
+                "HistoryLimit": 5,
+                "ModelName": "Youtu/youtu-intent-pro",
+                "ModelParams": {
+                    "Temperature": 0,
+                    "TopP": 0.8,
+                    "MaxTokens": 4000
+                }
+            }
+        },
+        "GenerateModel": {
+            "Model": {
+                "ModelAliasName": "youtu-mrc-pro",
+                "PromptVersion": "v14",
+                "HistoryLimit": 5,
+                "ModelName": "Youtu/youtu-mrc-pro",
+                "ModelParams": {
+                    "Temperature": 0.7,
+                    "TopP": 0.6,
+                    "MaxTokens": 4000
+                }
+            }
+        },
+        "LongMemory": {
+            "LongMemoryDays": 30,
+            "Enable": false,
+            "Model": {
+                "ModelAliasName": "DeepSeek-V3-0324",
+                "PromptVersion": "",
+                "HistoryLimit": 5,
+                "ModelName": "Deepseek/deepseek-v3-250324",
+                "ModelParams": {
+                    "Temperature": 0.6,
+                    "TopP": 0.6,
+                    "MaxTokens": 4096
+                }
+            }
+        },
+        "MultiModalQA": {
+            "Model": {
+                "ModelAliasName": "hunyun-turbos-vision",
+                "PromptVersion": "",
+                "HistoryLimit": 5,
+                "ModelName": "Hunyuan/hunyuan-turbos-vision",
+                "ModelParams": {
+                    "Temperature": 0.7,
+                    "TopP": 0.6,
+                    "MaxTokens": 4096
+                }
+            }
+        },
+        "MultiModalUnderstanding": {
+            "Enable": false,
+            "Model": {
+                "ModelAliasName": "youtu-mllm",
+                "PromptVersion": "",
+                "HistoryLimit": 5,
+                "ModelName": "Youtu/youtu-mllm",
+                "ModelParams": {
+                    "Temperature": 0.7,
+                    "TopP": 0.6,
+                    "MaxTokens": 4000
+                }
+            }
+        },
+        "PromptRewrite": {
+            "Enable": true,
+            "Model": {
+                "ModelAliasName": "youtu-rewrite",
+                "PromptVersion": "v1",
+                "HistoryLimit": 5,
+                "ModelName": "Youtu/youtu-rewrite",
+                "ModelParams": {
+                    "Temperature": 1,
+                    "TopP": 0.5,
+                    "RepetitionPenalty": 1.02,
+                    "MaxTokens": 2000
+                }
+            }
+        },
+        "AIOptimizeModel": {
+            "Model": {
+                "ModelAliasName": "DeepSeek-V3-0324",
+                "PromptVersion": "",
+                "HistoryLimit": 0,
+                "ModelName": "Deepseek/deepseek-v3-250324",
+                "ModelParams": {
+                    "Temperature": 0.6,
+                    "TopP": 0.6,
+                    "MaxTokens": 4096
+                }
+            }
+        },
+        "FileParseModel": {
+            "ModelName": "Youtu/youtu-parsing-sync",
+            "ModelAliasName": "youtu-parsing-sync"
+        }
+    },
+    "SingleWorkflowConfig": {
+        "WorkflowDescription": "",
+        "WorkflowId": "",
+        "WorkflowName": ""
+    },
+    "AgentConfig": {
+        "AgentCollaboration": {
+            "AgentCollaborationMode": 2,
+            "WorkflowId": "cf8af0e2-cf97-4157-80ce-55878b7ea5f9",
+            "WorkflowName": ""
+        }
+    },
+    "AdvancedConfig": {
+        "EnableImageTextRetrieval": false,
+        "IntentAchievements": [],
+        "EnableContextRewrite": true,
+        "ReplyFlexibility": "QAPriority",
+        "KnowledgeAdvanced": {
+            "RerankModel": "Youtu/youtu-reranker",
+            "RetrievalFinalCount": 15
+        },
+        "AICall": {
+            "DigitalHuman": {
+                "AssetKey": "",
+                "Avatar": "",
+                "Name": "",
+                "PreviewUrl": ""
+            },
+            "EnableDigitalHuman": false,
+            "EnableVoiceCall": false,
+            "EnableVoiceInteract": false,
+            "Voice": {
+                "TimbreKey": "",
+                "VoiceName": "",
+                "VoiceType": 0
+            }
+        }
+    },
+    "ChatConfig": {
+        "BackgroundImage": {
+            "Brightness": 0,
+            "LandscapeImageUrl": "",
+            "OriginalImageUrl": "",
+            "PortraitImageUrl": "",
+            "ThemeColor": ""
+        },
+        "BareAnswer": "",
+        "InputBoxConfig": {
+            "InputBoxButtons": []
+        },
+        "Method": 1,
+        "RecommendedPromptMode": 0,
+        "EnableGeneralKnowledge": true,
+        "EnableRecommended": false,
+        "EnableWebSearch": false
+    }
+}

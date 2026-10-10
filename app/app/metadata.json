@@ -1,0 +1,30 @@
+{
+  "AppName": "智造实演",
+  "AppVersion": "v20260908092446",
+  "Modules": {
+    "Agent": {
+      "Items": [
+        {
+          "AgentId": "abb75da0-e79e-4ca7-9c77-f1f32d435921",
+          "Name": "智造实演"
+        }
+      ]
+    },
+    "Workflow": {
+      "Items": [
+        {
+          "WorkflowId": "cf8af0e2-cf97-4157-80ce-55878b7ea5f9",
+          "Name": "计算小车避障路径并返回折线图数据-副本3"
+        }
+      ]
+    },
+    "KnowledgeBase": {
+      "Items": [
+        {
+          "KnowledgeBaseId": "2095864559561684864",
+          "Name": "我的智能体应用16"
+        }
+      ]
+    }
+  }
+}

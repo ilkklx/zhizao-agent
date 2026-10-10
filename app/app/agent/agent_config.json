@@ -1,0 +1,304 @@
+{
+  "StartingAgentId": "abb75da0-e79e-4ca7-9c77-f1f32d435921",
+  "HandoffAdvancedSetting": {
+    "ConversationPolicy": "LAST_REPLY_AGENT"
+  },
+  "Agents": [
+    {
+      "AgentId": "abb75da0-e79e-4ca7-9c77-f1f32d435921",
+      "Name": "智造实演",
+      "Type": "NORMAL_AGENT",
+      "Mode": "FREE_HANDOFF",
+      "IconUrl": "asset/image/ughPaSeynXIKXpGyYwFg-2097133718857667776.png",
+      "Instructions": "如果用户询问传感器原理、AGV 安全规则、算法概念、课程知识等学习类问题，请直接使用知识库问答回答，不要调用工作流；只有用户明确要求规划路径（提供了起点、终点或地图参数）时，才调用工作流\"计算小车避障路径并返回折线图数据\"。",
+      "HandoffDescription": "AGV 仓储小车避障实验教学助手。识别学生操作意图（规划路径、知识问答、查看报告）。学生要求计算避障路径（含起点、终点、地图参数）时，转交\"计算小车避障路径并返回折线图数据\"工作流；学生询问传感器原理、A*算法、AGV安全规则等课程知识时，使用知识库问答回答。",
+      "Model": {
+        "ModelName": "Internal/DeepSeek-V4-Flash正式版",
+        "ModelAliasName": "DeepSeek-V4-Flash正式版",
+        "ModelParams": {
+          "Temperature": 0,
+          "TopP": 0.5,
+          "MaxTokens": 1000
+        },
+        "InstructionsWordsLimit": 100000
+      },
+      "Tools": [
+        {
+          "PluginId": "3ad93aae-587e-4bcc-ae07-ad13bfb1aaca",
+          "ToolId": "0ca8d482-1e77-462b-bc21-807c8f052f69",
+          "Description": "大模型结合知识库内容回答用户问题",
+          "Inputs": [
+            {
+              "Name": "Query"
+            },
+            {
+              "Name": "Model",
+              "SubParams": [
+                {
+                  "Name": "ModelName",
+                  "DefaultValue": "Youtu/youtu-mrc-pro",
+                  "AgentHidden": true,
+                  "Input": {
+                    "InputType": 1,
+                    "UserInputValue": {
+                      "Values": [
+                        "Youtu/youtu-mrc-pro"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Name": "ModelAliasName",
+                  "DefaultValue": "youtu-mrc-pro",
+                  "AgentHidden": true,
+                  "Input": {
+                    "InputType": 1,
+                    "UserInputValue": {
+                      "Values": [
+                        "youtu-mrc-pro"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Name": "ModelParam",
+                  "SubParams": [
+                    {
+                      "Name": "Temperature",
+                      "DefaultValue": "0.7",
+                      "AgentHidden": true,
+                      "Input": {
+                        "InputType": 1,
+                        "UserInputValue": {
+                          "Values": [
+                            "0.7"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "Name": "TopP",
+                      "DefaultValue": "0.6",
+                      "AgentHidden": true,
+                      "Input": {
+                        "InputType": 1,
+                        "UserInputValue": {
+                          "Values": [
+                            "0.6"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "Name": "Seed",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "PresencePenalty",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "FrequencyPenalty",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "RepetitionPenalty",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "MaxTokens",
+                      "DefaultValue": "4000",
+                      "AgentHidden": true,
+                      "Input": {
+                        "InputType": 1,
+                        "UserInputValue": {
+                          "Values": [
+                            "4000"
+                          ]
+                        }
+                      }
+                    },
+                    {
+                      "Name": "StopSequences",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "ReplyFormat",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "DeepThinking",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "ReasoningEffort",
+                      "AgentHidden": true
+                    }
+                  ],
+                  "AgentHidden": true
+                }
+              ],
+              "AgentHidden": true
+            },
+            {
+              "Name": "SystemPrompt",
+              "AgentHidden": true
+            },
+            {
+              "Name": "KnowledgeScope",
+              "SubParams": [
+                {
+                  "Name": "AllKnowledge",
+                  "DefaultValue": "true",
+                  "AgentHidden": true,
+                  "Input": {
+                    "InputType": 1,
+                    "UserInputValue": {
+                      "Values": [
+                        "true"
+                      ]
+                    }
+                  }
+                },
+                {
+                  "Name": "KnowledgeList",
+                  "SubParams": [
+                    {
+                      "Name": "KnowledgeBizId",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "Scope",
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "SpecificKnowledge",
+                      "SubParams": [
+                        {
+                          "Name": "DocBizIds",
+                          "AgentHidden": true
+                        },
+                        {
+                          "Name": "AllQa",
+                          "AgentHidden": true
+                        },
+                        {
+                          "Name": "DBInfo",
+                          "SubParams": [
+                            {
+                              "Name": "DbSourceBizId",
+                              "AgentHidden": true
+                            },
+                            {
+                              "Name": "DbTableBizIds",
+                              "AgentHidden": true
+                            }
+                          ],
+                          "AgentHidden": true
+                        }
+                      ],
+                      "AgentHidden": true
+                    },
+                    {
+                      "Name": "Tag",
+                      "SubParams": [
+                        {
+                          "Name": "Operator",
+                          "AgentHidden": true
+                        },
+                        {
+                          "Name": "Labels",
+                          "SubParams": [
+                            {
+                              "Name": "AttributeBizId",
+                              "AgentHidden": true
+                            },
+                            {
+                              "Name": "AttrValues",
+                              "AgentHidden": true
+                            }
+                          ],
+                          "AgentHidden": true
+                        }
+                      ],
+                      "AgentHidden": true
+                    }
+                  ],
+                  "AgentHidden": true
+                }
+              ],
+              "AgentHidden": true
+            }
+          ],
+          "Outputs": [
+            {
+              "Name": "Code"
+            },
+            {
+              "Name": "Msg"
+            },
+            {
+              "Name": "Data",
+              "SubParams": [
+                {
+                  "Name": "Thought"
+                },
+                {
+                  "Name": "Answer"
+                },
+                {
+                  "Name": "References",
+                  "SubParams": [
+                    {
+                      "Name": "DocID"
+                    },
+                    {
+                      "Name": "ID"
+                    },
+                    {
+                      "Name": "Name"
+                    },
+                    {
+                      "Name": "Type"
+                    },
+                    {
+                      "Name": "Url"
+                    },
+                    {
+                      "Name": "DocBizID"
+                    },
+                    {
+                      "Name": "DocName"
+                    },
+                    {
+                      "Name": "QABizID"
+                    },
+                    {
+                      "Name": "KnowledgeBizID"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "Plugins": [
+        {
+          "PluginId": "3ad93aae-587e-4bcc-ae07-ad13bfb1aaca"
+        }
+      ],
+      "AdvancedConfig": {
+        "EnableClarification": true,
+        "MaxReasoningRound": 15,
+        "HistoryLimit": 50,
+        "OutputConfig": {
+          "OutputType": 1
+        },
+        "ClarificationConfig": {
+          "OutputType": 1
+        }
+      }
+    }
+  ]
+}
